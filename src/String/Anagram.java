@@ -18,7 +18,7 @@ public class Anagram {
                     if(chr1[i]==chr2[j]){
                         flag=1;
                     }else{
-                        continue;
+                        flag=0;
                     }
                 }
             }
