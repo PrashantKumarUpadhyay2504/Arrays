@@ -36,8 +36,6 @@ public class Createing_Node {
         return head;
     }
         
-
-    }
     private static void printNode(Node head){
         while(head.next!=null){
             System.out.print(head.data+" ");
