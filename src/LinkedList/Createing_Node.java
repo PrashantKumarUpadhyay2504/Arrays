@@ -1,5 +1,6 @@
 package LinkedList;
 
+import java.util.Scanner;
 
 class Node <T>{
     Node <T> next;
@@ -9,8 +10,34 @@ class Node <T>{
         this.data=data;
         this.next=null;
     }
+
+    public Node() {
+    }
 }
 public class Createing_Node {
+
+    private static Node<Integer>insertNode(){
+        Node<Integer>head=null;
+        Scanner sc=new Scanner(System.in);
+        int data= sc.nextInt();
+        while(data!=-1){
+            Node<Integer> newnode=new Node<Integer>(data);
+            if (head==null){
+                head=newnode;
+            }else{
+                Node<Integer> temp=head;
+                while(temp.next!=null){
+                    temp =temp.next;
+                }
+                temp.next=newnode;
+            }
+            data=sc.nextInt();
+        }
+        return head;
+    }
+        
+
+    }
     private static void printNode(Node head){
         while(head.next!=null){
             System.out.print(head.data+" ");
@@ -18,16 +45,7 @@ public class Createing_Node {
         } 
     }
     public static void main(String[] args) {
-        Node Node1 = new Node(10);
-        Node Node2 = new Node(20);
-        Node Node3 = new Node(30);
-        Node Node4 = new Node(40);
-
-        Node1.next=Node2;
-        Node2.next = Node3;
-        Node3.next=Node4;
-        Node head=Node1;
-
+        Node<Integer> head = new Node<Integer>();
         printNode(head);
         
     }
