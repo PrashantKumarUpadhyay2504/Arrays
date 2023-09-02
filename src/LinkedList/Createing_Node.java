@@ -11,6 +11,12 @@ class Node <T>{
     }
 }
 public class Createing_Node {
+    private static void printNode(Node head){
+        while(head.next!=null){
+            System.out.print(head.data+" ");
+            head=head.next;
+        } 
+    }
     public static void main(String[] args) {
         Node Node1 = new Node(10);
         Node Node2 = new Node(20);
@@ -21,10 +27,9 @@ public class Createing_Node {
         Node2.next = Node3;
         Node3.next=Node4;
         Node head=Node1;
-        while(head.next!=null){
-            System.out.print(head.data+" ");
-            head=head.next;
-        }
+
+        printNode(head);
+        
     }
     
 }
