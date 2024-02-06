@@ -47,6 +47,7 @@ class Stack {
         }
     }
 
+
     void print() {
         for (int i = top; i > -1; i--) {
             System.out.print(" " + a[i]);
@@ -54,7 +55,6 @@ class Stack {
     }
 }
 
-// Driver code
 class Main {
 
     public static void main(String args[]) {
