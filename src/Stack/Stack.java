@@ -8,9 +8,11 @@ class Stack {
     int top;
     int a[] = new int[MAX]; // Maximum size of Stack
 
+
     boolean isEmpty() {
         return (top < 0);
     }
+
 
     Stack() {
         top = -1;
@@ -26,6 +28,7 @@ class Stack {
             return true;
         }
     }
+
 
     int pop() {
         if (top < 0) {
